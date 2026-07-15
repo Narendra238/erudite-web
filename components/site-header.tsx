@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-type ActivePage = "home" | "layanan" | "alur" | "kontak";
+type ActivePage = "home" | "layanan" | "study-club" | "alur" | "kontak";
 
 type SiteHeaderProps = {
   activePage?: ActivePage;
@@ -13,6 +13,7 @@ type SiteHeaderProps = {
 const navItems: Array<{ href: string; label: string; id: ActivePage }> = [
   { href: "/", label: "Beranda", id: "home" },
   { href: "/layanan", label: "Layanan", id: "layanan" },
+  { href: "/study-club", label: "Study Club", id: "study-club" },
   { href: "/alur", label: "Alur", id: "alur" },
   { href: "/kontak", label: "Hubungi Kami", id: "kontak" },
 ];
