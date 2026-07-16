@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { TestimonialCarousel } from "@/components/testimonial-carousel";
 
 const highlights = [
   {
@@ -124,6 +125,8 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      <TestimonialCarousel />
 
       <SiteFooter />
     </main>
