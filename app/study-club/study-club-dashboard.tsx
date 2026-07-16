@@ -38,8 +38,8 @@ const studyClubData: BatchData[] = [
         youtubeUrl: "https://youtu.be/Z61qEOjm6EA",
       }
     ],
-    certificateUrl: "",
-    virtualBackgroundUrl: ""
+    certificateUrl: "https://drive.google.com/drive/folders/1EuS8XDM7zfEdCJwdt4wJguyqJcJa0YtY?usp=sharing",
+    virtualBackgroundUrl: "https://drive.google.com/file/d/1jvPO4sOk1Qjd5M2-PSFbW3qZp-2RAj6-/view?usp=sharing"
   },
   {
     batch: 2,
@@ -60,8 +60,8 @@ const studyClubData: BatchData[] = [
         youtubeUrl: "https://youtu.be/aBjZH1yrRnA",
       }
     ],
-    certificateUrl: "",
-    virtualBackgroundUrl: ""
+    certificateUrl: "https://drive.google.com/drive/folders/1hsiIodccQPhx4u8L1q4aJT9lZWL9rLf5?usp=sharing",
+    virtualBackgroundUrl: "https://drive.google.com/file/d/1yBK_71zDYHAkz1h2Cn_-ohyXHm6_NKKv/view?usp=sharing"
   },
   {
     batch: 3,
@@ -82,8 +82,8 @@ const studyClubData: BatchData[] = [
         youtubeUrl: "https://youtu.be/SWMdwQvNGHA",
       }
     ],
-    certificateUrl: "",
-    virtualBackgroundUrl: ""
+    certificateUrl: "https://drive.google.com/drive/folders/1JfIrpt77NXFApHGqziFut21_aITKMotK?usp=sharing",
+    virtualBackgroundUrl: "https://drive.google.com/file/d/1s6GsUS-IsCRvAbHbNvPRJooiQKdjtbP-/view?usp=sharing"
   },
   {
     batch: 4,
@@ -104,8 +104,8 @@ const studyClubData: BatchData[] = [
         youtubeUrl: "https://youtu.be/l0IiGvM9zbI",
       }
     ],
-    certificateUrl: "",
-    virtualBackgroundUrl: ""
+    certificateUrl: "https://drive.google.com/drive/folders/1RQ6ImM3auAo3TVK3gXPzmTGh3ocmRJwu?usp=sharing",
+    virtualBackgroundUrl: "https://drive.google.com/file/d/1go1f8aqtoZ4nbIyHSSxoXCimlGJF5xsx/view?usp=sharing"
   },
   {
     batch: 5,
@@ -126,8 +126,8 @@ const studyClubData: BatchData[] = [
         youtubeUrl: "https://youtu.be/kQ4obQUAopQ",
       }
     ],
-    certificateUrl: "",
-    virtualBackgroundUrl: ""
+    certificateUrl: "https://drive.google.com/drive/folders/1hRp8v_cqo7Jv_ZWvgA5zPBoldAgMLkGo?usp=sharing",
+    virtualBackgroundUrl: "https://drive.google.com/file/d/1iAS2_jDn4pRhjOzlWMM_X7b5P1CJF81_/view?usp=sharing"
   },
   {
     batch: 6,
@@ -148,8 +148,8 @@ const studyClubData: BatchData[] = [
         youtubeUrl: "https://youtu.be/S9p6gZsh5Zc",
       }
     ],
-    certificateUrl: "",
-    virtualBackgroundUrl: ""
+    certificateUrl: "https://drive.google.com/drive/folders/1cyc-1tn4HgZM9-mZ3c3SHlKvvsRWaQ-T?usp=sharing",
+    virtualBackgroundUrl: "https://drive.google.com/file/d/1g0tmdiBKdNE991l3ZZUr5ZY0J4zDhC5_/view?usp=sharing"
   }
 ];
 
@@ -217,7 +217,7 @@ export function StudyClubDashboard() {
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between border-b border-[#58585A]/10 pb-4">
             <div>
               <span className="inline-block rounded-full bg-[#CDCD2E]/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#58585A]/90">
-                Batch 0{activeBatch.batch}
+                Batch {activeBatch.batch}
               </span>
               <h2 className="mt-2 text-2xl font-bold text-[#58585A]">
                 {activeBatch.title}
@@ -385,7 +385,7 @@ export function StudyClubDashboard() {
                   d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                 />
               </svg>
-              Unduhan File & Sertifikat Batch 0{activeBatch.batch}
+              Unduhan File & Sertifikat Batch {activeBatch.batch}
             </h3>
 
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
