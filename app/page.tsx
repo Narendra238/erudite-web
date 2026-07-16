@@ -8,12 +8,12 @@ const highlights = [
     label: "Kelas Online untuk belajar bareng dengan tema berbeda setiap sesi.",
   },
   {
-    value: "15+",
+    value: "23+",
     label: "Research Matters bergabung bersama Erudite Research Partner.",
   },
   {
     value: "20+",
-    label: "Sudah sebanyak 15 layanan terselesaikan dan masih terus bertambah.",
+    label: "Sudah sebanyak 20 layanan terselesaikan dan masih terus bertambah.",
   },
 ];
 
