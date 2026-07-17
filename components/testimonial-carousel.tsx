@@ -153,7 +153,7 @@ export function TestimonialCarousel() {
           Apa Kata Matters Tentang Kami?
         </h2>
         <p className="mx-auto mt-4 max-w-2xl text-base text-[#58585A]/70">
-          Umpan balik tulus dari para Matters (peneliti, mahasiswa, dan akademisi) yang telah mempercayakan perjalanannya bersama ERUDITE.
+          Umpan balik tulus dari para Matters yang telah mempercayakan perjalanannya bersama ERUDITE.
         </p>
       </div>
 
