@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
   {
     id: 3,
     name: "Murdiyanto, S.Pd.Gr.",
-    role: "Guru SD",
+    role: "Mahasiswa S2",
     institution: "SD Negeri 1 Gedompol",
     service: "Study Club Batch 6",
     rating: 5,
