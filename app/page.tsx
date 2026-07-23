@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { TestimonialCarousel } from "@/components/testimonial-carousel";
+import { HeroInteractiveCard } from "@/components/hero-interactive-card"; 
 
 const highlights = [
   {
@@ -92,18 +93,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="mt-6 space-y-4 rounded-[1.5rem] bg-[#58585A] p-5 text-white">
-                <div className="flex items-center justify-between text-sm text-white/78">
-                  <span>Progress Layanan Terselesaikan</span>
-                  <span>91%</span>
-                </div>
-                <div className="h-3 rounded-full bg-white/10">
-                  <div className="h-3 w-[91%] rounded-full bg-gradient-to-r from-[#CDCD2E] via-[#FFAA00] to-[#FF0000]" />
-                </div>
-                <p className="text-sm leading-6 text-white/78">
-                  Layanan yang kami berikan sudah terselesaikan dengan baik dan memuaskan bagi para Matters kami.
-                </p>
-              </div>
+              <HeroInteractiveCard />
             </div>
           </div>
         </div>
