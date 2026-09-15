@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-type ActivePage = "home" | "layanan" | "study-club" | "alur" | "kontak";
+type ActivePage = "home" | "layanan" | "study-club" | "lms" | "alur" | "tentang" | "kontak";
 
 type SiteHeaderProps = {
   activePage?: ActivePage;
@@ -14,17 +14,18 @@ const navItems: Array<{ href: string; label: string; id: ActivePage }> = [
   { href: "/", label: "Beranda", id: "home" },
   { href: "/layanan", label: "Layanan", id: "layanan" },
   { href: "/study-club", label: "Study Club", id: "study-club" },
+  { href: "/lms", label: "LMS", id: "lms" },
   { href: "/alur", label: "Alur", id: "alur" },
-  { href: "/kontak", label: "Hubungi Kami", id: "kontak" },
+  { href: "/tentang", label: "Tentang Kami", id: "tentang" },
 ];
 
 export function SiteHeader({ activePage }: SiteHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full px-4 pt-4 sm:px-6">
-      <div className="mx-auto flex w-full max-w-7xl flex-col rounded-[20px] border border-[#58585A]/10 bg-white/95 p-4 shadow-[0_16px_50px_rgba(88,88,90,0.07)] backdrop-blur transition-all duration-300">
-        <div className="flex items-center justify-between">
+    <header className="fixed left-0 top-0 z-50 w-full px-3 pt-3 sm:px-6 sm:pt-4">
+      <div className="mx-auto flex w-full max-w-7xl flex-col rounded-[20px] border border-[#58585A]/10 bg-white/95 p-3.5 sm:p-4 shadow-[0_16px_50px_rgba(88,88,90,0.07)] backdrop-blur transition-all duration-300">
+        <div className="flex items-center justify-between gap-2">
           {/* Logo & Brand */}
           <Link href="/" className="flex items-center justify-start gap-2.5 min-w-0">
             <Image
@@ -32,29 +33,29 @@ export function SiteHeader({ activePage }: SiteHeaderProps) {
               alt="ERUDITE logo"
               width={100}
               height={100}
-              className="h-9 w-9 sm:h-10 sm:w-10 flex-shrink-0 object-contain"
+              className="h-8 w-8 sm:h-10 sm:w-10 flex-shrink-0 object-contain"
               priority
             />
             <div className="min-w-0">
-              <p className="truncate text-xs font-semibold uppercase tracking-[0.15em] sm:tracking-[0.3em] text-[#CDCD2E]">
+              <p className="truncate text-xs sm:text-sm font-bold uppercase tracking-[0.15em] sm:tracking-[0.25em] text-[#CDCD2E]">
                 ERUDITE RESEARCH PARTNER
               </p>
-              <p className="hidden md:block truncate text-xs text-[#58585A]/75 mt-0.5 max-w-md lg:max-w-xl">
-                Kami tidak menuliskan namun menyempurnakan, tidak mengambil alih namun membagi peran.
+              <p className="truncate text-[11px] sm:text-xs text-[#58585A]/75 font-medium">
+                Your Research Matters
               </p>
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden gap-6 text-sm font-medium text-[#58585A]/80 md:flex items-center">
+          <nav className="hidden gap-5 lg:gap-6 text-sm font-medium text-[#58585A]/80 md:flex items-center">
             {navItems.map((item) => {
               const isActive = activePage === item.id;
               return (
                 <Link
                   key={item.id}
                   href={item.href}
-                  className={`transition-colors duration-200 hover:text-[#58585A] ${
-                    isActive ? "text-[#58585A] font-semibold" : "text-[#58585A]/80"
+                  className={`transition-colors duration-200 hover:text-[#58585A] whitespace-nowrap ${
+                    isActive ? "text-[#58585A] font-bold border-b-2 border-[#CDCD2E] pb-0.5" : "text-[#58585A]/80"
                   }`}
                 >
                   {item.label}

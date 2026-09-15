@@ -178,12 +178,12 @@ export function StudyClubDashboard() {
           <p className="text-sm font-semibold uppercase tracking-[0.28em] text-[#CDCD2E]">
             Program Study Club
           </p>
-          <h1 className="mt-3 text-4xl font-semibold tracking-tight text-[#58585A]">
-            Dokumentasi & Resource Belajar Bersama
+          <h1 className="mt-3 text-3xl sm:text-4xl font-bold tracking-tight text-[#58585A]">
+            Dokumentasi & Cuplikan Materi Belajar Bersama
           </h1>
-          <p className="mt-4 max-w-3xl text-base leading-8 text-[#58585A]/78 text-justify">
+          <p className="mt-4 max-w-3xl text-sm sm:text-base leading-7 sm:leading-8 text-[#58585A]/78 text-justify">
             ERUDITE telah menyelenggarakan kelas online Study Club secara rutin dengan berbagai mentor ahli dan tema materi yang berbeda setiap sesinya. 
-            Silakan pilih batch di bawah ini untuk mengakses rekaman YouTube materi sesi, serta mengunduh E-Sertifikat dan Virtual Background.
+            Tautan video di bawah ini merupakan <strong>cuplikan (teaser)</strong> materi sesi. Untuk rekaman berdurasi penuh beserta modul dan dataset, silakan lakukan pemesanan materi full melalui form yang tersedia.
           </p>
         </div>
 
@@ -199,7 +199,7 @@ export function StudyClubDashboard() {
                 <button
                   key={b.batch}
                   onClick={() => setSelectedBatchNumber(b.batch)}
-                  className={`rounded-xl px-4 py-2.5 text-sm font-semibold transition-all duration-300 ${
+                  className={`rounded-xl px-4 py-2.5 text-xs sm:text-sm font-semibold transition-all duration-300 ${
                     isActive
                       ? "bg-[#58585A] text-white shadow-lg shadow-[#58585A]/15 scale-105"
                       : "bg-[#CDCD2E]/10 text-[#58585A] border border-[#CDCD2E]/10 hover:bg-[#CDCD2E]/20"
@@ -213,23 +213,34 @@ export function StudyClubDashboard() {
         </div>
 
         {/* Active Batch Container */}
-        <div className="mt-10 rounded-[1.75rem] bg-[#CDCD2E]/5 border border-[#CDCD2E]/10 p-6 sm:p-8">
+        <div className="mt-10 rounded-[1.75rem] bg-[#CDCD2E]/5 border border-[#CDCD2E]/10 p-5 sm:p-8">
           <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between border-b border-[#58585A]/10 pb-4">
             <div>
               <span className="inline-block rounded-full bg-[#CDCD2E]/20 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#58585A]/90">
                 Batch {activeBatch.batch}
               </span>
-              <h2 className="mt-2 text-2xl font-bold text-[#58585A]">
+              <h2 className="mt-2 text-xl sm:text-2xl font-bold text-[#58585A]">
                 {activeBatch.title}
               </h2>
             </div>
-            <div className="text-xs text-[#58585A]/60 md:text-right">
-              2 Sesi Pembelajaran • Akses Online
+            <div className="inline-flex items-center gap-2 rounded-xl bg-white px-3 py-1.5 text-xs font-medium text-[#58585A] border border-[#58585A]/10 self-start md:self-auto">
+              <span className="h-2 w-2 rounded-full bg-[#CDCD2E]" />
+              <span>Video Cuplikan • Video Full Berbayar</span>
+            </div>
+          </div>
+
+          {/* Info Banner for Teaser & Full Paid Video */}
+          <div className="mt-6 rounded-xl border border-[#CDCD2E]/30 bg-[#CDCD2E]/15 p-4 text-xs text-[#58585A]/85 flex items-start gap-3">
+            <svg className="h-5 w-5 text-[#58585A] flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <div>
+              <strong className="font-semibold text-[#58585A]">Informasi Akses Rekaman:</strong> Video YouTube berikut menyajikan highlight dan cuplikan pembahasan. Video berdurasi utuh (2 Jam/sesi) beserta file presentasi & dataset latihan dapat dipesan oleh peserta umum/guest melalui form pemesanan di bawah.
             </div>
           </div>
 
           {/* Sessions Grid */}
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
             {activeBatch.sessions.map((session) => {
               const thumbnail = getYoutubeThumbnail(session.youtubeUrl);
               return (
@@ -242,7 +253,9 @@ export function StudyClubDashboard() {
                     <span className="text-xs font-bold uppercase tracking-widest text-[#CDCD2E]">
                       Sesi 0{session.sessionNumber}
                     </span>
-                    <span className="text-xs text-[#58585A]/60 font-medium">Video Rekaman</span>
+                    <span className="rounded bg-[#CDCD2E]/20 px-2 py-0.5 text-[10px] font-bold text-[#58585A] uppercase tracking-wider">
+                      Cuplikan Video
+                    </span>
                   </div>
 
                   <h3 className="mt-4 text-base font-semibold leading-snug text-[#58585A] min-h-[48px]">
@@ -316,8 +329,8 @@ export function StudyClubDashboard() {
                                 <path d="M8 5v14l11-7z" />
                               </svg>
                             </div>
-                            <span className="mt-2 text-[10px] font-semibold text-white tracking-wider uppercase bg-black/50 px-2 py-0.5 rounded backdrop-blur-sm">
-                              Putar di YouTube
+                            <span className="mt-2 text-[10px] font-semibold text-white tracking-wider uppercase bg-black/60 px-2.5 py-1 rounded backdrop-blur-sm">
+                              Tonton Cuplikan di YouTube
                             </span>
                           </div>
                         </>
@@ -335,7 +348,7 @@ export function StudyClubDashboard() {
                             />
                           </svg>
                           <span className="mt-2 text-xs font-semibold text-white tracking-wide uppercase">
-                            Putar di YouTube
+                            Tonton Cuplikan di YouTube
                           </span>
                         </div>
                       )}
@@ -356,7 +369,7 @@ export function StudyClubDashboard() {
                         />
                       </svg>
                       <span className="text-xs font-medium text-[#58585A]/60">
-                        Rekaman YouTube Segera Hadir
+                        Cuplikan YouTube Segera Hadir
                       </span>
                       <span className="text-[10px] text-[#58585A]/45 mt-0.5">
                         Draf disiapkan oleh sistem
@@ -369,7 +382,7 @@ export function StudyClubDashboard() {
           })}
           </div>
 
-          {/* Resources Download Area */}
+          {/* Resources & Order Area */}
           <div className="mt-8 border-t border-[#58585A]/10 pt-8">
             <h3 className="text-lg font-bold text-[#58585A] flex items-center gap-2">
               <svg
@@ -385,38 +398,34 @@ export function StudyClubDashboard() {
                   d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
                 />
               </svg>
-              Unduhan File & Sertifikat Batch {activeBatch.batch}
+              Akses Materi & Resource Batch {activeBatch.batch}
             </h3>
 
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
-              {/* E-Certificate Card */}
-              <div className="flex flex-col justify-between rounded-2xl border border-[#58585A]/10 bg-white p-5 transition-shadow hover:shadow-md">
+              {/* Order Full Video Card (Replacement for E-Certificate) */}
+              <div className="flex flex-col justify-between rounded-2xl border-2 border-[#CDCD2E] bg-white p-5 shadow-sm">
                 <div>
-                  <h4 className="text-sm font-bold text-[#58585A] uppercase tracking-wide">
-                    E-Sertifikat Peserta
-                  </h4>
-                  <p className="mt-1 text-xs text-[#58585A]/70 text-justify">
-                    Dapatkan sertifikat resmi bukti keikutsertaan Anda dalam pembelajaran online Study Club batch ini.
+                  <div className="flex items-center justify-between">
+                    <h4 className="text-sm font-bold text-[#58585A] uppercase tracking-wide">
+                      Order Video Full & Modul (Guest / Non-SC)
+                    </h4>
+                    <span className="rounded bg-[#CDCD2E] px-2 py-0.5 text-[10px] font-bold text-[#58585A]">
+                      Full Version
+                    </span>
+                  </div>
+                  <p className="mt-2 text-xs text-[#58585A]/75 text-justify">
+                    Dapatkan rekaman video lengkap berdurasi penuh (2 jam/sesi), file slide presentasi materi, modul panduan PDF, dan dataset latihan untuk Batch {activeBatch.batch}.
                   </p>
                 </div>
-                <div className="mt-4 pt-2">
-                  {activeBatch.certificateUrl ? (
-                    <a
-                      href={activeBatch.certificateUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center rounded-xl bg-[#58585A] py-2 text-xs font-semibold text-white shadow-sm transition hover:bg-[#4d4d4f]"
-                    >
-                      Unduh E-Sertifikat
-                    </a>
-                  ) : (
-                    <button
-                      disabled
-                      className="w-full rounded-xl bg-[#58585A]/10 py-2 text-xs font-semibold text-[#58585A]/40 cursor-not-allowed border border-[#58585A]/5"
-                    >
-                      Tautan Unduh Belum Tersedia
-                    </button>
-                  )}
+                <div className="mt-5 flex flex-col sm:flex-row gap-2 pt-2 border-t border-[#58585A]/10">
+                  <a
+                    href={`https://wa.me/628112225499?text=Halo%20Admin%20ERUDITE,%20saya%20ingin%20order%20Video%20Full%20Materi%20dan%20Modul%20Study%20Club%20Batch%20${activeBatch.batch}%20(${encodeURIComponent(activeBatch.title)})`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex flex-1 items-center justify-center rounded-xl bg-[#58585A] py-2.5 text-xs font-semibold text-white shadow-sm transition hover:bg-[#4d4d4f]"
+                  >
+                    Order via Form / WhatsApp
+                  </a>
                 </div>
               </div>
 
@@ -424,26 +433,26 @@ export function StudyClubDashboard() {
               <div className="flex flex-col justify-between rounded-2xl border border-[#58585A]/10 bg-white p-5 transition-shadow hover:shadow-md">
                 <div>
                   <h4 className="text-sm font-bold text-[#58585A] uppercase tracking-wide">
-                    Virtual Background
+                    Virtual Background Resmi
                   </h4>
-                  <p className="mt-1 text-xs text-[#58585A]/70 text-justify">
+                  <p className="mt-2 text-xs text-[#58585A]/70 text-justify">
                     Gunakan virtual background resmi ERUDITE untuk tampilan profesional selama Zoom atau Google Meet.
                   </p>
                 </div>
-                <div className="mt-4 pt-2">
+                <div className="mt-5 pt-2 border-t border-[#58585A]/10">
                   {activeBatch.virtualBackgroundUrl ? (
                     <a
                       href={activeBatch.virtualBackgroundUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex w-full items-center justify-center rounded-xl bg-[#CDCD2E] py-2 text-xs font-semibold text-[#58585A] shadow-sm transition hover:bg-[#d7d72f]"
+                      className="inline-flex w-full items-center justify-center rounded-xl bg-[#CDCD2E] py-2.5 text-xs font-semibold text-[#58585A] shadow-sm transition hover:bg-[#d7d72f]"
                     >
                       Unduh Virtual Background
                     </a>
                   ) : (
                     <button
                       disabled
-                      className="w-full rounded-xl bg-[#58585A]/10 py-2 text-xs font-semibold text-[#58585A]/40 cursor-not-allowed border border-[#58585A]/5"
+                      className="w-full rounded-xl bg-[#58585A]/10 py-2.5 text-xs font-semibold text-[#58585A]/40 cursor-not-allowed border border-[#58585A]/5"
                     >
                       Background Belum Tersedia
                     </button>
