@@ -42,7 +42,7 @@ const teamStructure = [
     role: "Senior Research Consultant & Expert Mentor",
     focus: "Metodologi Riset, Manajemen Referensi, & Strategi Publikasi Ilmiah",
     badge: "Dewan Pakar",
-    image: "/BuDian.jpeg",
+    image: "/BuDianNew.jpeg",
   },
   {
     name: "Erfin Efendi, M.Pd",
@@ -50,7 +50,7 @@ const teamStructure = [
     role: "Senior Research Advisor & Methodology Expert",
     focus: "Desain Riset Akademik, Validasi Instrumen, & Pendampingan Tesis/Disertasi",
     badge: "Dewan Pakar",
-    image: "/PakErfin.jpeg",
+    image: "/PakErfinNew.jpeg",
   },
   {
     name: "M. Luthfi Imama, M.Pd",
@@ -58,7 +58,7 @@ const teamStructure = [
     role: "Lead Qualitative Analyst & Academic Mentor",
     focus: "Analisis Data Kualitatif, ATLAS.ti Pro, Coding Data, & Penulisan Artikel",
     badge: "Tim Ahli Riset",
-    image: "/MasLuthfi.jpeg",
+    image: "/MasLuthfiNew.jpeg",
   },
   {
     name: "Ade Putra, M.Pd",
@@ -66,7 +66,7 @@ const teamStructure = [
     role: "Research Tools & Reference Specialist",
     focus: "ATLAS.ti Fundamental, Manajemen Sitasi (Mendeley/Zotero), & Olah Data",
     badge: "Tim Ahli Riset",
-    image: "/MasAde.jpeg",
+    image: "/MasAdeNew.jpeg",
   },
   {
     name: "Anisatul Maysaroh, M.Pd",
@@ -74,7 +74,7 @@ const teamStructure = [
     role: "Academic Writing & Publication Specialist",
     focus: "Struktur Penulisan Artikel Jurnal SINTA/Scopus & Teknik Coding Tematik",
     badge: "Tim Ahli Riset",
-    image: "/MbaAnisa.jpeg",
+    image: "/MbaAnisaNew.jpeg",
   },
   {
     name: "Wahyu Prihatiningsih, M.Pd",
@@ -82,7 +82,7 @@ const teamStructure = [
     role: "Citation & Academic Language Specialist",
     focus: "Kaidah Sitasi Baku, Proofreading Akademik, & Tata Tulis Karya Ilmiah",
     badge: "Tim Ahli Riset",
-    image: "/MbaAyu.jpeg",
+    image: "/MbaAyuNew.jpeg",
   },
   {
     name: "M. Narendra, S.Kom.",
@@ -90,7 +90,7 @@ const teamStructure = [
     role: "Operations Manager & Technical Lead",
     focus: "Manajemen Alur Layanan, Quality Control Naskah, & Pengembangan Platform LMS",
     badge: "Operasional & IT",
-    image: "/Naren.jpg",
+    image: "/NarenNew.jpg",
   },
 ];
 
