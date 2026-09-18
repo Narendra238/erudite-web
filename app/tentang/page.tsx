@@ -35,21 +35,28 @@ const businessGoals = [
   },
 ];
 
-const teamStructure = [
+interface TeamMember {
+  name: string;
+  shortName: string;
+  role: string;
+  focus?: string;
+  badge: string;
+  image: string;
+}
+
+const teamStructure: TeamMember[] = [
   {
     name: "Dr. Dian Hidayati, M.M.",
     shortName: "Dr. Dian",
-    role: "Senior Research Consultant & Expert Mentor",
-    focus: "Metodologi Riset, Manajemen Referensi, & Strategi Publikasi Ilmiah",
-    badge: "Dewan Pakar",
+    role: "Penasihat Pelaksanaan Erudite Research",
+    badge: "Supervisor Advisor",
     image: "/BuDian.jpeg",
   },
   {
-    name: "Erfin Efendi, M.Pd",
+    name: "Erfin Septana",
     shortName: "Pak Erfin",
-    role: "Senior Research Advisor & Methodology Expert",
-    focus: "Desain Riset Akademik, Validasi Instrumen, & Pendampingan Tesis/Disertasi",
-    badge: "Dewan Pakar",
+    role: "Penasihat Pelaksanaan Erudite Research",
+    badge: "Supervisor Advisor",
     image: "/PakErfin.jpeg",
   },
   {
@@ -87,8 +94,8 @@ const teamStructure = [
   {
     name: "M. Narendra, S.Kom.",
     shortName: "Mas Naren",
-    role: "Operations Manager & Technical Lead",
-    focus: "Manajemen Alur Layanan, Quality Control Naskah, & Pengembangan Platform LMS",
+    role: "Operasional & IT",
+    focus: "Information Technology and Operations Management",
     badge: "Operasional & IT",
     image: "/Naren.jpg",
   },
@@ -311,11 +318,13 @@ export default function TentangPage() {
                       {member.role}
                     </p>
 
-                    <div className="mt-3.5 rounded-xl bg-[#CDCD2E]/10 p-3 border border-[#CDCD2E]/20">
-                      <p className="text-xs leading-relaxed text-[#58585A]/80 text-justify">
-                        <strong className="text-[#58585A] font-semibold">Bidang Keahlian:</strong> {member.focus}
-                      </p>
-                    </div>
+                    {member.focus ? (
+                      <div className="mt-3.5 rounded-xl bg-[#CDCD2E]/10 p-3 border border-[#CDCD2E]/20">
+                        <p className="text-xs leading-relaxed text-[#58585A]/80 text-justify">
+                          <strong className="text-[#58585A] font-semibold">Bidang Keahlian:</strong> {member.focus}
+                        </p>
+                      </div>
+                    ) : null}
                   </div>
 
                   {/* Consultation Button */}
