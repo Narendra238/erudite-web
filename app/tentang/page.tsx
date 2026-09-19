@@ -85,9 +85,9 @@ const teamStructure: TeamMember[] = [
     image: "/MasAde.png",
   },
   {
-    name: "Muhammad Narendra Hawari, S.Kom.",
+    name: "M. Narendra Hawari, S.Kom.",
     shortName: "Mas Naren",
-    role: "Operasional & IT",
+    role: "IT & Creative Specialist",
     badge: "CREATIVE & TECHNOLOGY",
     image: "/Naren.png",
   },
@@ -177,7 +177,7 @@ export default function TentangPage() {
                     ))}
                   </div>
                   <p className="mt-2.5 text-[11px] font-semibold text-[#58585A]/80">
-                    7 Mentor Ahli, Dewan Pakar & QC
+                    Erudite Research Partner Team
                   </p>
                 </div>
               </div>
