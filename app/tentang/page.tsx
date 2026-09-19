@@ -50,14 +50,14 @@ const teamStructure: TeamMember[] = [
     shortName: "Dr. Dian",
     role: "Penasihat Pelaksanaan Erudite Research",
     badge: "Supervisor Advisor",
-    image: "/BuDian.jpeg",
+    image: "/BuDian.png",
   },
   {
     name: "Erfin Septana",
     shortName: "Pak Erfin",
     role: "Penasihat Pelaksanaan Erudite Research",
     badge: "Supervisor Advisor",
-    image: "/PakErfin.jpeg",
+    image: "/PakErfin.png",
   },
   {
     name: "M. Luthfi Imama, M.Pd",
@@ -65,7 +65,7 @@ const teamStructure: TeamMember[] = [
     role: "Lead Qualitative Analyst & Academic Mentor",
     focus: "Analisis Data Kualitatif, ATLAS.ti Pro, Coding Data, & Penulisan Artikel",
     badge: "Tim Ahli Riset",
-    image: "/MasLuthfi.jpeg",
+    image: "/MasLuthfi.png",
   },
   {
     name: "Ade Putra, M.Pd",
@@ -73,7 +73,7 @@ const teamStructure: TeamMember[] = [
     role: "Research Tools & Reference Specialist",
     focus: "ATLAS.ti Fundamental, Manajemen Sitasi (Mendeley/Zotero), & Olah Data",
     badge: "Tim Ahli Riset",
-    image: "/MasAde.jpeg",
+    image: "/MasAde.png",
   },
   {
     name: "Anisatul Maysaroh, M.Pd",
@@ -81,7 +81,7 @@ const teamStructure: TeamMember[] = [
     role: "Academic Writing & Publication Specialist",
     focus: "Struktur Penulisan Artikel Jurnal SINTA/Scopus & Teknik Coding Tematik",
     badge: "Tim Ahli Riset",
-    image: "/MbaAnisa.jpeg",
+    image: "/MbaAnisa.png",
   },
   {
     name: "Wahyu Prihatiningsih, M.Pd",
@@ -89,7 +89,7 @@ const teamStructure: TeamMember[] = [
     role: "Citation & Academic Language Specialist",
     focus: "Kaidah Sitasi Baku, Proofreading Akademik, & Tata Tulis Karya Ilmiah",
     badge: "Tim Ahli Riset",
-    image: "/MbaAyu.jpeg",
+    image: "/MbaAyu.png",
   },
   {
     name: "M. Narendra, S.Kom.",
@@ -97,7 +97,7 @@ const teamStructure: TeamMember[] = [
     role: "Operasional & IT",
     focus: "Information Technology and Operations Management",
     badge: "Operasional & IT",
-    image: "/Naren.jpg",
+    image: "/Naren.png",
   },
 ];
 

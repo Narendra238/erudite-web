@@ -159,13 +159,13 @@ export default function Home() {
               </p>
               <div className="flex items-center -space-x-2 overflow-hidden py-1">
                 {[
-                  { src: "/BuDian.jpeg", name: "Dr. Dian Hidayati, M.M." },
-                  { src: "/PakErfin.jpeg", name: "Erfin Efendi, M.Pd" },
-                  { src: "/MasLuthfi.jpeg", name: "M. Luthfi Imama, M.Pd" },
-                  { src: "/MasAde.jpeg", name: "Ade Putra, M.Pd" },
-                  { src: "/MbaAnisa.jpeg", name: "Anisatul Maysaroh, M.Pd" },
-                  { src: "/MbaAyu.jpeg", name: "Wahyu Prihatiningsih, M.Pd" },
-                  { src: "/Naren.jpg", name: "M. Narendra, S.Kom." },
+                  { src: "/BuDian.png", name: "Dr. Dian Hidayati, M.M." },
+                  { src: "/PakErfin.png", name: "Erfin Septana" },
+                  { src: "/MasLuthfi.png", name: "M. Luthfi Imama, M.Pd" },
+                  { src: "/MasAde.png", name: "Ade Putra, M.Pd" },
+                  { src: "/MbaAnisa.png", name: "Anisatul Maysaroh, M.Pd" },
+                  { src: "/MbaAyu.png", name: "Wahyu Prihatiningsih, M.Pd" },
+                  { src: "/Naren.png", name: "M. Narendra, S.Kom." },
                 ].map((member) => (
                   <div
                     key={member.src}
