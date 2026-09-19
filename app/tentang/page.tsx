@@ -39,64 +39,56 @@ interface TeamMember {
   name: string;
   shortName: string;
   role: string;
-  focus?: string;
   badge: string;
   image: string;
 }
 
 const teamStructure: TeamMember[] = [
-  {
-    name: "Dr. Dian Hidayati, M.M.",
-    shortName: "Dr. Dian",
-    role: "Penasihat Pelaksanaan Erudite Research",
-    badge: "Supervisor Advisor",
-    image: "/BuDian.png",
-  },
-  {
-    name: "Erfin Septana",
-    shortName: "Pak Erfin",
-    role: "Penasihat Pelaksanaan Erudite Research",
-    badge: "Supervisor Advisor",
-    image: "/PakErfin.png",
-  },
+  //{
+  //name: "Dr. Dian Hidayati, M.M.",
+  //shortName: "Dr. Dian",
+  //badge: "ADVISORY & OPERATIONS",
+  //image: "/BuDian.png",
+  //},
+  // {
+  //   name: "Erfin Septana",
+  //   shortName: "Pak Erfin",
+  //   badge: "Treasurer & Administration Officer",
+  //   image: "/PakErfin.png",
+  // },
   {
     name: "M. Luthfi Imama, M.Pd",
     shortName: "Mas Luthfi",
-    role: "Lead Qualitative Analyst & Academic Mentor",
-    focus: "Analisis Data Kualitatif, ATLAS.ti Pro, Coding Data, & Penulisan Artikel",
-    badge: "Tim Ahli Riset",
+    role: "Director",
+    badge: "EXECUTIVE LEADERSHIP",
     image: "/MasLuthfi.png",
-  },
-  {
-    name: "Ade Putra, M.Pd",
-    shortName: "Mas Ade",
-    role: "Research Tools & Reference Specialist",
-    focus: "ATLAS.ti Fundamental, Manajemen Sitasi (Mendeley/Zotero), & Olah Data",
-    badge: "Tim Ahli Riset",
-    image: "/MasAde.png",
   },
   {
     name: "Anisatul Maysaroh, M.Pd",
     shortName: "Mba Anisa",
-    role: "Academic Writing & Publication Specialist",
-    focus: "Struktur Penulisan Artikel Jurnal SINTA/Scopus & Teknik Coding Tematik",
-    badge: "Tim Ahli Riset",
+    role: "Research Data Analysis & Instrument Development Service Lead",
+    badge: "ACADEMIC SERVICE LEADS",
     image: "/MbaAnisa.png",
   },
   {
     name: "Wahyu Prihatiningsih, M.Pd",
     shortName: "Mba Ayu",
-    role: "Citation & Academic Language Specialist",
-    focus: "Kaidah Sitasi Baku, Proofreading Akademik, & Tata Tulis Karya Ilmiah",
-    badge: "Tim Ahli Riset",
+    role: "Research Consulting Service Lead ",
+    badge: "ACADEMIC SERVICE LEADS",
     image: "/MbaAyu.png",
   },
   {
-    name: "M. Narendra, S.Kom.",
+    name: "Ade Putra, M.Pd",
+    shortName: "Mas Ade",
+    role: "Research Supporting Service Lead",
+    badge: "ACADEMIC SERVICE LEADS",
+    image: "/MasAde.png",
+  },
+  {
+    name: "Muhammad Narendra Hawari, S.Kom.",
     shortName: "Mas Naren",
     role: "Operasional & IT",
-    focus: "Information Technology and Operations Management",
-    badge: "Operasional & IT",
+    badge: "CREATIVE & TECHNOLOGY",
     image: "/Naren.png",
   },
 ];
@@ -295,16 +287,15 @@ export default function TentangPage() {
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
                       />
-                      
+
                       {/* Badge Top Left */}
                       <div className="absolute top-3 left-3 z-10">
-                        <span className={`inline-flex items-center rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider shadow-md backdrop-blur-md ${
-                          member.badge === "Dewan Pakar"
+                        <span className={`inline-flex items-center rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider shadow-md backdrop-blur-md ${member.badge === "Dewan Pakar"
                             ? "bg-[#58585A] text-white"
                             : member.badge === "Operasional & IT"
-                            ? "bg-[#CDCD2E] text-[#58585A]"
-                            : "bg-white/95 text-[#58585A] border border-[#58585A]/15"
-                        }`}>
+                              ? "bg-[#CDCD2E] text-[#58585A]"
+                              : "bg-white/95 text-[#58585A] border border-[#58585A]/15"
+                          }`}>
                           {member.badge}
                         </span>
                       </div>
@@ -317,14 +308,6 @@ export default function TentangPage() {
                     <p className="mt-1 text-xs font-semibold text-[#b8b823]">
                       {member.role}
                     </p>
-
-                    {member.focus ? (
-                      <div className="mt-3.5 rounded-xl bg-[#CDCD2E]/10 p-3 border border-[#CDCD2E]/20">
-                        <p className="text-xs leading-relaxed text-[#58585A]/80 text-justify">
-                          <strong className="text-[#58585A] font-semibold">Bidang Keahlian:</strong> {member.focus}
-                        </p>
-                      </div>
-                    ) : null}
                   </div>
 
                   {/* Consultation Button */}
