@@ -159,8 +159,8 @@ export default function Home() {
               </p>
               <div className="flex items-center -space-x-2 overflow-hidden py-1">
                 {[
-                  { src: "/BuDian.png", name: "Dr. Dian Hidayati, M.M." },
-                  { src: "/PakErfin.png", name: "Erfin Septana" },
+                  //{ src: "/BuDian.png", name: "Dr. Dian Hidayati, M.M." },
+                  //{ src: "/PakErfin.png", name: "Erfin Septana" },
                   { src: "/MasLuthfi.png", name: "M. Luthfi Imama, M.Pd" },
                   { src: "/MasAde.png", name: "Ade Putra, M.Pd" },
                   { src: "/MbaAnisa.png", name: "Anisatul Maysaroh, M.Pd" },
